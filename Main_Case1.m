@@ -6,7 +6,10 @@ N=1024*2; %512;
 RytovV=[.1:.1:1 1.5 2 2.5 3]; % Rytov=0.312 * k^(7/6) * Dz_s^(11/6) * Cn2;
 ntrial=10; 
 nscreen=20;
-kpowV=[19:23 23.2:.2:23.8]/6; %[20:24]/6
+kpowV=[19:23 23.2:.2:23.8]/6; %[20:24]/6 % Cn2 calculated using 22/6
+
+alpha_rand=[19.1 19.5:.5:22 22 22:.5:23.5 23.9]; % value of alpha between [19:24]/6 randomly selected in each screen
+
 if(isave>0) saveDir=['Saved/' date() '_' flag]; [suc,mesg,msgid]=mkdir(saveDir);   end
 
 %PlotAll(.1,kpowV,'Saved/15-Jul-2016',1,1); return;
