@@ -1,4 +1,4 @@
-function phz = Cn2ToPhase(Cn2,wvl,N,deltax,deltaz, Lout,Lin,alpha)
+function [phz r0] = Cn2ToPhase(Cn2,wvl,N,deltax,deltaz, Lout,Lin,alpha)
     flag='mvK'; 
 
     k=2*pi/wvl; del_f = 1/(N*deltax); fx = (-N/2:N/2-1)*del_f; [fx, fy] = meshgrid(fx); 
@@ -23,7 +23,7 @@ function phz = Cn2ToPhase(Cn2,wvl,N,deltax,deltaz, Lout,Lin,alpha)
     end
     PSD_phi(N/2+1,N/2+1)=0; 
      cnm=(randn(N)+1i*randn(N)).*sqrt(PSD_phi)*del_f; 
-     phz = real( ifftshift(ifft2(ifftshift(cnm)))*(N*1)^2;);
+     phz = real( ifftshift(ifft2(ifftshift(cnm)))*(N*1)^2);
      %fprintf('[phz mean/var real imag]=%.1e %.1e %.1e %.1e\n',mean(phz(:)),var(phz(:)),mean(imag(phzComplex(:))),var(imag(phzComplex(:))));
 
 end

@@ -26,4 +26,7 @@ iplot=0;
  fig=figure(2);  saveas(fig,sprintf('%s/Rytov_varI.jpg',Dir),'jpg');
  fig=figure(3);  saveas(fig,sprintf('%s/Cn2_nIz.jpg',Dir),'jpg');
  fig=figure(4);  saveas(fig,sprintf('%s/Cn2_varI.jpg',Dir),'jpg');
-end
+
+
+iplot=1; 
+end % function
