@@ -3,11 +3,11 @@ clear;
 global flag; 
 Lin = 5e-3; Lout=10; isave=2; flag='mvK'; deltax = 1e-3;   wvl=0.532e-6; Dz=10e3; 
 noise=.0; % +/- [10]% noise in Cn2
-N=1024*2; %512;
-RytovV=[.1:.1:1 1.5 2 2.5 3]; % Rytov=0.312 * k^(7/6) * Dz_s^(11/6) * Cn2;
-ntrial=10; 
+N=1024*1; %512;
+RytovV=.1; %[.1:.1:1 1.5 2 2.5 3]; % Rytov=0.312 * k^(7/6) * Dz_s^(11/6) * Cn2;
+ntrial=2; 
 nscreen=20;
-kpowV=[19:23 23.2:.2:23.8]/6; %[20:24]/6 % Cn2 calculated using 22/6
+kpowV=22/6; %[19:23 23.2:.2:23.8]/6; %[20:24]/6 % Cn2 calculated using 22/6
 
 %alpha_rand=[19.1 19.5:.5:22 22 22:.5:23.5 23.9]; % value of alpha between [19:24]/6 randomly selected in each screen
 
