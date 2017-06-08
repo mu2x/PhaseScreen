@@ -1,4 +1,4 @@
-clear; % Testing
+clear; % Te
 wvl=1e-6; k=2*pi/wvl; L=10000; delta=1e-3; Rytov=.1; 
 
 jj=0; 
