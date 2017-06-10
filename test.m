@@ -5,7 +5,7 @@ jj=0;
 for Rytov=[.1 .5 1 2 10]
     ii=0;jj=jj+1; 
   for i=1:20:400; 
-    ii=ii+1; 
+    ii=ii+1;
     r=i*delta; sR=(4*Rytov)^(1/2); 
 
     ny=3*(1+.69*sR^(12/5)); nx=2.61/(1+1.11*sR^(12/5)); 
