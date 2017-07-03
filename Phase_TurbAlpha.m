@@ -1,6 +1,6 @@
 function [phz, r0, Cn2] = Phase_TurbAlpha(Rytov,wvl,N,deltax,deltaz, L, Lout,Lin,alpha)
     global flag; 
-    % Stribiling, SPIE V 2471, Rytov=sigma_x^2
+    % 4, SPIE V 2471, Rytov=sigma_x^2
     k=2*pi/wvl; 
     %Cn2=Rytov/(0.312 * k^(7/6) * L^(11/6));r0 = (.423*k^2*Cn2.*deltaz).^(-3/5);
     del_f = 1/(N*deltax); fx = (-N/2:N/2-1)*del_f; [fx, fy] = meshgrid(fx); 

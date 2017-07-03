@@ -2,11 +2,11 @@ clear;
 % Written by V. Kumar (vkumar@utep.edu), most functions adopted from J. Schmidt book
 global flag; 
 Lin = 5e-3; Lout=10; isave=2; flag='mvK'; deltax = 1e-3;   wvl=0.532e-6; Dz=10e3; 
-N=1024*2; %512;
-RytovV=[.1:.1:1 1.5 2 2.5 3]; % Rytov=0.312 * k^(7/6) * Dz_s^(11/6) * Cn2;
-ntrial=10; 
+N=512; %1024*2; %512;
+RytovV=0.1; %[.1:.1:1 1.5 2 2.5 3]; % Rytov=0.312 * k^(7/6) * Dz_s^(11/6) * Cn2;
+ntrial=1; %10; 
 nscreen=20;
-kpowV=[19:23 23.2:.2:23.8]/6; %[20:24]/6
+kpowV=22/6; %[19:23 23.2:.2:23.8]/6; %[20:24]/6
 if(isave>0) saveDir=['Saved/' date() '_' flag]; [suc,mesg,msgid]=mkdir(saveDir);   end
 
 %PlotAll(.1,kpowV,'Saved/15-Jul-2016',1,1); return;
